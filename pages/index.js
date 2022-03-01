@@ -17,7 +17,7 @@ export default function Home() {
   const [trackLoadingError, setTrackLoadingError] = useState(false)
 
   const me = {
-    name: "Mizure Furlanza",
+    name: "Mizure",
     github: "koizumi024",
     discord: "Mizure#2621",
     lastfm: "nero_asterisk",
