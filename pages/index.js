@@ -44,7 +44,7 @@ export default function Home() {
       <div className={Style.grid}>
         <Image
           className={Style.avatar}
-          src='/../public/avatar.jpg'
+          src="https://i.imgur.com/oh6lOXQ.jpeg"
           width="150"
           height="150"
           alt="avatar"

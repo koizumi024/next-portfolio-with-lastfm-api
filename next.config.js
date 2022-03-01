@@ -5,6 +5,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ['lastfm.freetls.fastly.net'],
+    domains: ['lastfm.freetls.fastly.net', 'i.imgur.com'],
   },
 };
