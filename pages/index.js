@@ -10,6 +10,7 @@ import { faDiscord } from "@fortawesome/free-brands-svg-icons"
 
 import IconWithRightText from './components/IconWithRightText'
 import Track from './components/Track'
+import CircleImage from './components/CircleImage';
 
 export default function Home() {
   const [tracks, setTracks] = useState([])
@@ -18,6 +19,7 @@ export default function Home() {
 
   const me = {
     name: "Mizure",
+    avatar: "https://i.imgur.com/oh6lOXQ.jpeg",
     github: "koizumi024",
     discord: "Mizure#2621",
     lastfm: "nero_asterisk",
@@ -42,12 +44,11 @@ export default function Home() {
 
     <div className={Style.container}>
       <div className={Style.grid}>
-        <Image
-          className={Style.avatar}
-          src="https://i.imgur.com/oh6lOXQ.jpeg"
+        <CircleImage
+          src={me.avatar}
           width="150"
           height="150"
-          alt="avatar"
+          alt="avatar" 
         />
         <div className={Style.nameWrap}>
           <span className={Style.username}>{me.name}</span>
@@ -56,7 +57,6 @@ export default function Home() {
         <a href={`https://github.com/${me.github}`}>
           <IconWithRightText icon={faGithub}>{me.github}</IconWithRightText>
         </a>
-        
         <IconWithRightText icon={faDiscord}>{me.discord}</IconWithRightText>
       </div>
 
