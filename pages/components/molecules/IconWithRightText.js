@@ -1,4 +1,4 @@
-import Style from '../../styles/Home.module.css'
+import Style from '../../../styles/Home.module.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function IconWithRightText(props) {

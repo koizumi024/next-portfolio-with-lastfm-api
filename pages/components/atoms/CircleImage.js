@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Style from '../../styles/Home.module.css'
+import Style from '../../../styles/Home.module.css'
 
 export default function CircleImage(props){
   const {src, width, height, alt} = props
