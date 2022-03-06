@@ -19,7 +19,7 @@ export default function ProfileGrid(){
           name={me.name} 
           bio={me.bio} 
           github={me.github} 
-          discord={me.github}
+          discord={me.discord}
         />
       </div>
     </>
