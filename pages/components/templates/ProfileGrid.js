@@ -7,7 +7,7 @@ export default function ProfileGrid(){
     name: "Mizure",
     bio: "Frontend Developer",
     avatar: "https://i.imgur.com/oh6lOXQ.jpeg",
-    github: "koizumi024",
+    github: "mizurest",
     discord: "Mizure#2621",
     lastfm: "nero_asterisk",
   }
