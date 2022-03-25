@@ -7,15 +7,15 @@ export default function Track(props){
     <>
     <div className={Style.track}>
       <Image
-        className={Style.trackThumb}
+        className={Style.thumb}
           src={src}
           width="55"
           height="55"
           alt="track-thumbnail"
       />
-      <div className={Style.trackDescription}>
-        <div className={Style.trackName}>{name}</div>
-        <div className={Style.trackArtist}>{artist}</div>
+      <div className={Style.description}>
+        <div className={Style.name}>{name}</div>
+        <div className={Style.artist}>{artist}</div>
       </div>
     </div>
     </>

@@ -1,0 +1,100 @@
+// Colors
+$primary: #fff;
+$second: #808080;
+
+.container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.grid{
+  padding: 20px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+
+  h1{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.avatar{
+  border-radius: 50%;
+}
+.nameWrap{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .username{
+    text-align: center;
+    color: $primary;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .bio{
+    text-align: center;
+    color: $second;
+    font-size: 14px;
+  }
+}
+
+.iconWrap{
+  color: $primary;
+  font-size: 14px;
+  padding: 3px;
+}
+.icon{
+  margin-right: 4px;
+}
+
+.track{
+  display: flex;
+  padding: 10px 0px;
+  max-width: 100%;
+
+  .thumb{
+    border-radius: 10%;
+  }
+
+  .description{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    .name{
+      color: $primary;
+      font-size: 18px;
+      max-width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .artist{
+      color: $second;
+      font-size: 14px;
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.trackStatus{
+  margin: 40px 0px;
+}
+.apiDescription{
+  color: $second;
+  font-size: 11px;
+  margin: 20px 0px 0px 0px;
+
+  a{
+    color: $primary;
+  }
+}
