@@ -6,7 +6,7 @@ export default function ProfileGrid(){
   const me = {
     name: "Mizure",
     bio: "Frontend Developer",
-    avatar: "https://i.imgur.com/aKvLlM4.jpeg",
+    avatar: "https://i.imgur.com/3KCJYih.jpeg",
     github: "mizurest",
     discord: "Mizure#2621",
     lastfm: "nero_asterisk",
