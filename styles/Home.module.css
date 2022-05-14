@@ -30,6 +30,25 @@
   font-size: 28px;
   font-weight: 600;
   margin: 0px 0px 20px 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.grid h1:before {
+  background: #101010;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  content: '';
+  -webkit-animation: animation01 0.6s forwards;
+          animation: animation01 0.6s forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .avatar {
@@ -65,7 +84,7 @@
 
 .iconWrap {
   color: #fff;
-  font-size: 14px;
+  font-size: 24px;
   padding: 3px;
 }
 
@@ -83,6 +102,14 @@
 
 .track .thumb {
   border-radius: 10%;
+  -webkit-animation: animation02 0.6s forwards;
+          animation: animation02 0.6s forwards;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .track .description {
@@ -97,6 +124,25 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.track .description:before {
+  background: #101010;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  content: '';
+  -webkit-animation: animation01 0.6s forwards;
+          animation: animation01 0.6s forwards;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .track .description .name {
@@ -129,5 +175,45 @@
 
 .apiDescription a {
   color: #fff;
+}
+
+@-webkit-keyframes animation01 {
+  100% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+}
+
+@keyframes animation01 {
+  100% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+}
+
+@-webkit-keyframes animation02 {
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes animation02 {
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes blur {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blur {
+  100% {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=Home.module.css.map */

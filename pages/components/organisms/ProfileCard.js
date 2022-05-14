@@ -24,7 +24,7 @@ export default function ProfileCard(props){
       <a href={`https://github.com/${github}`}>
         <IconWithRightText icon={faGithub}>{github}</IconWithRightText>
       </a>
-      <IconWithRightText icon={faDiscord}>{discord}</IconWithRightText>
+      {/* <IconWithRightText icon={faDiscord}>{discord}</IconWithRightText> */}
     </>
   )
 }

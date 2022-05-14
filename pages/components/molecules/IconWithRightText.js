@@ -6,7 +6,7 @@ export default function IconWithRightText(props) {
   return(
     <div className={Style.iconWrap}>
       <FontAwesomeIcon className={Style.icon} icon={icon} />
-      <span>{children}</span>
+      {/* <span>{children}</span> */}
     </div>
   )
 }

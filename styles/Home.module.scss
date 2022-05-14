@@ -18,6 +18,22 @@ $second: #808080;
     font-size: 28px;
     font-weight: 600;
     margin: 0px 0px 20px 0px;
+    overflow: hidden;
+    position: relative;
+
+    &:before{
+      background: #101010;
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      content: '';
+      animation: animation01 0.6s forwards;
+      animation-delay: 0.3s;
+      animation-direction: alternate;
+    }
   }
 }
 
@@ -45,7 +61,7 @@ $second: #808080;
 
 .iconWrap{
   color: $primary;
-  font-size: 14px;
+  font-size: 24px;
   padding: 3px;
 }
 .icon{
@@ -59,6 +75,10 @@ $second: #808080;
 
   .thumb{
     border-radius: 10%;
+    animation: animation02 0.6s forwards;
+    animation-delay: 0.9s;
+    animation-direction:alternate;
+    transform: translateX(100%);
   }
   
   .description{
@@ -66,6 +86,22 @@ $second: #808080;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    &:before{
+      background: #101010;
+      z-index: 1;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      content: '';
+      animation: animation01 0.6s forwards;
+      animation-delay: 0.9s;
+      animation-direction: alternate;
+    }
   
     .name{
       color: $primary;
@@ -74,6 +110,8 @@ $second: #808080;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      
+
     }
     .artist{
       color: $second;
@@ -82,6 +120,9 @@ $second: #808080;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    
+
+
     }
   }
 }
@@ -96,5 +137,23 @@ $second: #808080;
 
   a{
     color: $primary;
+  }
+}
+
+@keyframes animation01 {
+  100% {
+  transform: translateX(101%);
+  }
+}
+
+@keyframes animation02 {
+  100% {
+  transform: translateX(0%);
+  }
+}
+
+@keyframes blur {
+  100% {
+    opacity: 1;
   }
 }
