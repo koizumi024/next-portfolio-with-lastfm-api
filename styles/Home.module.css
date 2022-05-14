@@ -45,6 +45,8 @@
   content: '';
   -webkit-animation: animation01 0.6s forwards;
           animation: animation01 0.6s forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
   -webkit-animation-direction: alternate;
@@ -104,6 +106,8 @@
   border-radius: 10%;
   -webkit-animation: animation02 0.6s forwards;
           animation: animation02 0.6s forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
   -webkit-animation-direction: alternate;
@@ -139,6 +143,8 @@
   content: '';
   -webkit-animation: animation01 0.6s forwards;
           animation: animation01 0.6s forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
   -webkit-animation-direction: alternate;
@@ -202,18 +208,6 @@
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes blur {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blur {
-  100% {
-    opacity: 1;
   }
 }
 /*# sourceMappingURL=Home.module.css.map */

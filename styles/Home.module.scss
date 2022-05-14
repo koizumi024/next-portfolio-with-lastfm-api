@@ -31,6 +31,7 @@ $second: #808080;
       top: 0;
       content: '';
       animation: animation01 0.6s forwards;
+      animation-timing-function: ease-out;
       animation-delay: 0.3s;
       animation-direction: alternate;
     }
@@ -76,8 +77,9 @@ $second: #808080;
   .thumb{
     border-radius: 10%;
     animation: animation02 0.6s forwards;
+    animation-timing-function: ease-out;
     animation-delay: 0.9s;
-    animation-direction:alternate;
+    animation-direction: alternate;
     transform: translateX(100%);
   }
   
@@ -99,6 +101,7 @@ $second: #808080;
       top: 0;
       content: '';
       animation: animation01 0.6s forwards;
+      animation-timing-function: ease-out;
       animation-delay: 0.9s;
       animation-direction: alternate;
     }
@@ -110,8 +113,6 @@ $second: #808080;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      
-
     }
     .artist{
       color: $second;
@@ -120,9 +121,6 @@ $second: #808080;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    
-
-
     }
   }
 }
@@ -149,11 +147,5 @@ $second: #808080;
 @keyframes animation02 {
   100% {
   transform: translateX(0%);
-  }
-}
-
-@keyframes blur {
-  100% {
-    opacity: 1;
   }
 }
