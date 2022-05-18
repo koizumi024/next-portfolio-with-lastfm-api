@@ -31,7 +31,7 @@ const ProfileCard: React.VFC<Props> = (props) => {
       </div>
       <a href={`https://github.com/${github}`}>
         <div className={Style.iconWrap}>
-          <FontAwesomeIcon className={Style.icon} icon={faGithub} />
+          {/* <FontAwesomeIcon className={Style.icon} icon={faGithub} /> */}
         </div>
       </a>
     </>
