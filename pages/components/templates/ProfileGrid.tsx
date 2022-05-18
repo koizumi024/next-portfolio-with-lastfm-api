@@ -2,7 +2,7 @@ import Style from '../../../styles/Home.module.css'
 
 import ProfileCard from '../organisms/ProfileCard'
 
-export default function ProfileGrid(){
+const ProfileGrid = () => {
   const me = {
     name: "Mizure",
     bio: "Frontend Developer",
@@ -25,3 +25,5 @@ export default function ProfileGrid(){
     </>
   )
 }
+
+export default ProfileGrid

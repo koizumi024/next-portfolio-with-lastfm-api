@@ -1,7 +1,13 @@
 import Style from '../../../styles/Home.module.css'
 import Image from 'next/image'
 
-export default function Track(props){
+type Props = {
+  src: string;
+  name: string;
+  artist: string;
+}
+
+const Track: React.VFC<Props> = (props) => {
   const { src, name, artist } = props
   return(
     <>
@@ -21,3 +27,5 @@ export default function Track(props){
     </>
   )
 }
+
+export default Track;

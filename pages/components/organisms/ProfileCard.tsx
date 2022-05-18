@@ -1,13 +1,21 @@
 import Style from '../../../styles/Home.module.css'
 
 import CircleImage from '../atoms/CircleImage'
-import IconWithRightText from '../molecules/IconWithRightText'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faDiscord } from "@fortawesome/free-brands-svg-icons"
 
-export default function ProfileCard(props){
+type Props = {
+  avatar: string;
+  name: string;
+  bio: string;
+  github?: string;
+  discord?: string;
+}
+
+const ProfileCard: React.VFC<Props> = (props) => {
   const {avatar, name, bio, github, discord} = props
   return(
     <>
@@ -22,9 +30,12 @@ export default function ProfileCard(props){
         <span className={Style.bio}>{bio}</span>
       </div>
       <a href={`https://github.com/${github}`}>
-        <IconWithRightText icon={faGithub}>{github}</IconWithRightText>
+        <div className={Style.iconWrap}>
+          <FontAwesomeIcon className={Style.icon} icon={faGithub} />
+        </div>
       </a>
-      {/* <IconWithRightText icon={faDiscord}>{discord}</IconWithRightText> */}
     </>
   )
 }
+
+export default ProfileCard
