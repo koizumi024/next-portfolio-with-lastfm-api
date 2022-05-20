@@ -15,15 +15,22 @@ const Home = () => {
   
   useEffect(() =>{
     setTrackLoading(true)
-    axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=4&user=nero_asterisk&api_key=5e81a94ee1bd10956d3073070a27dd1f&format=json`).then((res) => {
+    axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=4&user=nero_asterisk&api_key=5e81a94ee1bd10956d3073070a27dd1f&format=json`)
+    .then((res) => {
       setTracks(res.data.recenttracks.track)
       setBgImage(res.data.recenttracks.track[0].image[3]["#text"])
-      setNowplaying(res.data.recenttracks.track[0]["@attr"].nowplaying)
-
-      setTrackLoading(false)
-    }).catch(() => {
+      const attr = res.data.recenttracks.track[0]["@attr"]
+      if(typeof attr !== "undefined" ){
+        setNowplaying(attr.nowplaying)
+      }
+      
+      setTrackLoadingError(false)
+    })
+    .catch((err) => {
       setTrackLoadingError(true)
-
+      console.log(err)
+    })
+    .finally(() => {
       setTrackLoading(false)
     })
   }, [])
