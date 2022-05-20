@@ -1,11 +1,14 @@
 // Colors
 $primary: #fff;
 $second: #ccc;
+$accent: #65C3C8;
+
+$black: #101010;
 
 .container{
   min-height: 100vh;
   color: $primary;
-  background-color: #101010;
+  background-color: $black;
   transition: all 2s;
 }
 .blur{
@@ -48,6 +51,10 @@ $second: #ccc;
     position: relative;
     animation: fadeIn 0.8s forwards;
     animation-direction: alternate;
+    &::selection {
+      background: $accent;
+      color: #fff;
+    }
   }
 }
 
@@ -55,6 +62,9 @@ $second: #ccc;
   border-radius: 50%;
   animation: fadeIn 0.8s forwards;
   animation-direction: alternate;
+  &::selection {
+    background: $accent;
+  }
 }
 .nameWrap{
   padding: 10px;
@@ -69,11 +79,21 @@ $second: #ccc;
     color: $primary;
     font-size: 22px;
     font-weight: 700;
+
+    &::selection {
+      background: $accent;
+      color: $primary;
+    }
   }
   .bio{
     text-align: center;
     color: $second;
     font-size: 14px;
+
+    &::selection {
+      background: $accent;
+      color: $primary;
+    }
   }
 }
 
@@ -103,6 +123,10 @@ $second: #ccc;
     animation-direction: alternate;
     animation-delay: 0.7s;
     opacity: 0;
+
+    &::selection {
+      background: $accent;
+    }
   }
   
   .description{
@@ -126,6 +150,11 @@ $second: #ccc;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      &::selection {
+        background: $accent;
+        color: $primary;
+      }
     }
     .artist{
       color: $second;
@@ -134,6 +163,11 @@ $second: #ccc;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      &::selection {
+        background: $accent;
+        color: $primary;
+      }
     }
   }
 }
@@ -153,8 +187,17 @@ $second: #ccc;
   animation-direction: alternate;
   opacity: 0;
 
+  &::selection {
+    background: $accent;
+    color: $primary;
+  }
+
   a{
     color: $primary;
+    &::selection {
+      background: $accent;
+      color: $primary;
+    }
   }
 }
 

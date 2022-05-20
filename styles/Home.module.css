@@ -81,12 +81,30 @@
           animation-direction: alternate;
 }
 
+.card h1::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.card h1::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
 .avatar {
   border-radius: 50%;
   -webkit-animation: fadeIn 0.8s forwards;
           animation: fadeIn 0.8s forwards;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+}
+
+.avatar::-moz-selection {
+  background: #65C3C8;
+}
+
+.avatar::selection {
+  background: #65C3C8;
 }
 
 .nameWrap {
@@ -114,10 +132,30 @@
   font-weight: 700;
 }
 
+.nameWrap .username::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.nameWrap .username::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
 .nameWrap .bio {
   text-align: center;
   color: #ccc;
   font-size: 14px;
+}
+
+.nameWrap .bio::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.nameWrap .bio::selection {
+  background: #65C3C8;
+  color: #fff;
 }
 
 .iconWrap {
@@ -158,6 +196,14 @@
   opacity: 0;
 }
 
+.track .thumb::-moz-selection {
+  background: #65C3C8;
+}
+
+.track .thumb::selection {
+  background: #65C3C8;
+}
+
 .track .description {
   margin-left: 15px;
   display: -webkit-box;
@@ -193,6 +239,16 @@
   text-overflow: ellipsis;
 }
 
+.track .description .name::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.track .description .name::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
 .track .description .artist {
   color: #ccc;
   font-size: 14px;
@@ -200,6 +256,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.track .description .artist::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.track .description .artist::selection {
+  background: #65C3C8;
+  color: #fff;
 }
 
 .trackStatus {
@@ -225,7 +291,27 @@
   opacity: 0;
 }
 
+.apiDescription::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.apiDescription::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
 .apiDescription a {
+  color: #fff;
+}
+
+.apiDescription a::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.apiDescription a::selection {
+  background: #65C3C8;
   color: #fff;
 }
 

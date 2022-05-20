@@ -11,18 +11,26 @@ const Home = () => {
   const [bgImage, setBgImage] = useState([])
   const [trackLoading, setTrackLoading] = useState(false)
   const [trackLoadingError, setTrackLoadingError] = useState(false)
+  const [nowplaying, setNowplaying] = useState(false)
   
   useEffect(() =>{
     setTrackLoading(true)
-    axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=3&user=nero_asterisk&api_key=5e81a94ee1bd10956d3073070a27dd1f&format=json`).then((res) => {
+    axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=4&user=nero_asterisk&api_key=5e81a94ee1bd10956d3073070a27dd1f&format=json`).then((res) => {
       setTracks(res.data.recenttracks.track)
-      setTrackLoading(false)
       setBgImage(res.data.recenttracks.track[0].image[3]["#text"])
+      setNowplaying(res.data.recenttracks.track[0]["@attr"].nowplaying)
+
+      setTrackLoading(false)
     }).catch(() => {
       setTrackLoadingError(true)
+
       setTrackLoading(false)
     })
   }, [])
+
+  if(nowplaying){
+    tracks.pop()
+  }
 
   const bgStyle = {
     backgroundImage: 'url('+bgImage+')',
