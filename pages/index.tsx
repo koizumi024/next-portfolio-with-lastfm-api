@@ -4,7 +4,7 @@ import axios from 'axios'
 import { useState, useEffect } from 'react';
 
 import ProfileGrid from './components/templates/ProfileGrid';
-import Track from './components/molecules/Track';
+import TrackCard from './components/templates/TrackCard';
 
 const Home = () => {
   const [tracks, setTracks] = useState([])
@@ -55,27 +55,11 @@ const Home = () => {
       <div className={Style.blur}>
         <ProfileGrid />
         
-        <div className={Style.card}>
-          <h1>Recently played tracks</h1>
-          <div className={Style.trackList}>
-            {tracks.map((track) => {
-              return(
-                <Track
-                  key={track.name}
-                  src={track.image[2]["#text"]}
-                  name={track.name}
-                  artist={track.artist["#text"]}
-                />
-              )
-            })}
-          </div>
-          
-          {trackLoading && <p className={Style.trackStatus}>Loading...</p>}
-          {trackLoadingError && <p className={Style.trackStatus}>Not found tracks</p>}
-          
-          <p className={Style.apiDescription}>The tracks are fetching from <a href="https://www.last.fm/ja/api">Last.fm API</a></p>
-          
-        </div>
+        <TrackCard 
+          tracks={tracks}
+          trackLoading={trackLoading}
+          trackLoadingError={trackLoadingError}
+        />
       </div>
     </div>
     </>
