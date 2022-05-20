@@ -2,6 +2,8 @@
   min-height: 100vh;
   color: #fff;
   background-color: #101010;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
 .blur {
@@ -73,10 +75,18 @@
   margin: 0px 0px 20px 0px;
   overflow: hidden;
   position: relative;
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .avatar {
   border-radius: 50%;
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .nameWrap {
@@ -91,6 +101,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .nameWrap .username {
@@ -107,13 +121,20 @@
 }
 
 .iconWrap {
-  color: #fff;
-  font-size: 24px;
   padding: 3px;
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .icon {
-  margin-right: 4px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.icon:hover {
+  opacity: 0.6;
 }
 
 .track {
@@ -126,16 +147,15 @@
 
 .track .thumb {
   border-radius: 10%;
-  -webkit-animation: animation02 0.5s forwards;
-          animation: animation02 0.5s forwards;
+  -webkit-animation: fadeIn 0.5s forwards;
+          animation: fadeIn 0.5s forwards;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  opacity: 0;
 }
 
 .track .description {
@@ -152,6 +172,16 @@
           justify-content: center;
   overflow: hidden;
   position: relative;
+  border-radius: 10%;
+  -webkit-animation: fadeIn 0.5s forwards;
+          animation: fadeIn 0.5s forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  opacity: 0;
 }
 
 .track .description .name {
@@ -174,29 +204,72 @@
 
 .trackStatus {
   margin: 40px 0px;
+  -webkit-animation: fadeIn 0.2s forwards;
+          animation: fadeIn 0.2s forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .apiDescription {
   color: #ccc;
   font-size: 11px;
   margin: 20px 0px 0px 0px;
+  -webkit-animation: fadeIn 1.5s forwards;
+          animation: fadeIn 1.5s forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  opacity: 0;
 }
 
 .apiDescription a {
   color: #fff;
 }
 
-@-webkit-keyframes animation01 {
+@-webkit-keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
   100% {
-    -webkit-transform: translateX(101%);
-            transform: translateX(101%);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
   }
 }
 
-@keyframes animation01 {
+@keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
   100% {
-    -webkit-transform: translateX(101%);
-            transform: translateX(101%);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

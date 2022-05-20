@@ -6,6 +6,7 @@ $second: #ccc;
   min-height: 100vh;
   color: $primary;
   background-color: #101010;
+  transition: all 2s;
 }
 .blur{
   display: flex;
@@ -25,7 +26,6 @@ $second: #ccc;
   backdrop-filter: blur(30px);
   background-color: rgba(0,0,0,0.32);
   min-width: 100vw;
-
   box-shadow: 0 1.9px 2.5px rgba(0, 0, 0, 0.03), 0 5px 6.1px rgba(0, 0, 0, 0.03), 0 10.1px 11.4px rgba(0, 0, 0, 0.03);
 }
 .card{
@@ -46,17 +46,23 @@ $second: #ccc;
     margin: 0px 0px 20px 0px;
     overflow: hidden;
     position: relative;
+    animation: fadeIn 0.8s forwards;
+    animation-direction: alternate;
   }
 }
 
 .avatar{
   border-radius: 50%;
+  animation: fadeIn 0.8s forwards;
+  animation-direction: alternate;
 }
 .nameWrap{
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: fadeIn 0.8s forwards;
+  animation-direction: alternate;
 
   .username{
     text-align: center;
@@ -72,12 +78,17 @@ $second: #ccc;
 }
 
 .iconWrap{
-  color: $primary;
-  font-size: 24px;
   padding: 3px;
+  animation: fadeIn 0.8s forwards;
+  animation-direction: alternate;
 }
 .icon{
-  margin-right: 4px;
+  color: $primary;
+  font-size: 24px;
+
+  &:hover{
+    opacity: 0.6;
+  }
 }
 
 .track{
@@ -87,11 +98,11 @@ $second: #ccc;
 
   .thumb{
     border-radius: 10%;
-    animation: animation02 0.5s forwards;
+    animation: fadeIn 0.5s forwards;
     animation-timing-function: ease-out;
-    animation-delay: 0.9s;
     animation-direction: alternate;
-    transform: translateX(100%);
+    animation-delay: 0.7s;
+    opacity: 0;
   }
   
   .description{
@@ -101,6 +112,12 @@ $second: #ccc;
     justify-content: center;
     overflow: hidden;
     position: relative;
+    border-radius: 10%;
+    animation: fadeIn 0.5s forwards;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-delay: 0.7s;
+    opacity: 0;
 
     .name{
       color: $primary;
@@ -123,20 +140,41 @@ $second: #ccc;
 
 .trackStatus{
   margin: 40px 0px;
+  animation: fadeIn 0.2s forwards;
+  animation-direction: alternate;
 }
 .apiDescription{
   color: $second;
   font-size: 11px;
   margin: 20px 0px 0px 0px;
+  animation: fadeIn 1.5s forwards;
+  animation-timing-function: ease-out;
+  animation-delay: 1.5s;
+  animation-direction: alternate;
+  opacity: 0;
 
   a{
     color: $primary;
   }
 }
 
-@keyframes animation01 {
+@keyframes blurFadeIn {
+  0%{
+    opacity: 0;
+    filter: blur(10px);
+  }
   100% {
-  transform: translateX(101%);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

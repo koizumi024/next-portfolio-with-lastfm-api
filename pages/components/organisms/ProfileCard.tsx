@@ -2,10 +2,7 @@ import Style from '../../../styles/Home.module.css'
 
 import CircleImage from '../atoms/CircleImage'
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faDiscord } from "@fortawesome/free-brands-svg-icons"
+import { FaGithub } from "react-icons/fa"
 
 type Props = {
   avatar: string;
@@ -31,7 +28,7 @@ const ProfileCard: React.VFC<Props> = (props) => {
       </div>
       <a href={`https://github.com/${github}`}>
         <div className={Style.iconWrap}>
-          {/* <FontAwesomeIcon className={Style.icon} icon={faGithub} /> */}
+          <FaGithub className={Style.icon} />
         </div>
       </a>
     </>
