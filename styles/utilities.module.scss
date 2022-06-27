@@ -1,0 +1,82 @@
+// Colors
+$primary: #fff;
+$second: #ccc;
+$accent: #65C3C8;
+
+$black: #101010;
+
+// image icon
+.circleImage{
+    border-radius: 50%;
+    animation: fadeIn 0.8s forwards;
+    animation-direction: alternate;
+    &::selection {
+      background: $accent;
+    }
+}
+
+.icon{
+    color: $primary;
+    font-size: 24px;
+  
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+
+// text
+.text_md_bold{
+    text-align: center;
+    color: $primary;
+    font-size: 20px;
+    font-weight: 700;
+  
+    &::selection {
+      background: $accent;
+      color: $primary;
+    }
+  
+    a{
+      color: $primary;
+      &::selection {
+        background: $accent;
+        color: $primary;
+      }
+    }
+}
+
+.text_sm_light{
+    text-align: center;
+    color: $second;
+    font-size: 14px;
+  
+    &::selection {
+      background: $accent;
+      color: $primary;
+    }
+  
+    a{
+      color: $primary;
+      &::selection {
+        background: $accent;
+        color: $primary;
+      }
+    }
+}
+
+.fadeInAnimation{
+    animation: fadeIn 1.5s forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1.5s;
+    animation-direction: alternate;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}

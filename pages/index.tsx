@@ -1,11 +1,9 @@
-import Style from '../styles/Home.module.css'
-import Head from 'next/head'
 import axios from 'axios'
 import { isIE, isFirefox, isChrome } from 'react-device-detect';
 import { useState, useEffect } from 'react';
 
-import TopPage from './components/pages/TopPage';
-import UnsupportBrowser from './components/pages/UnsupportBrowser';
+import TopPage from '../components/pages/TopPage';
+import UnsupportBrowser from '../components/pages/UnsupportBrowser';
 
 const Home = () => {
   const [tracks, setTracks] = useState([])
@@ -46,12 +44,14 @@ const Home = () => {
 
   return (
     <>
+
       { supportBrowser ? <TopPage 
-        bgImage={bgImage}
-        tracks={tracks}
-        trackLoading={trackLoading}
-        trackLoadingError={trackLoadingError}
-      /> : <UnsupportBrowser />}
+          bgImage={bgImage}
+          tracks={tracks}
+          trackLoading={trackLoading}
+          trackLoadingError={trackLoadingError}
+        /> : <UnsupportBrowser />}
+
     </>
   )
 }

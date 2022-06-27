@@ -1,4 +1,4 @@
-import Style from '../../../styles/Home.module.css'
+import Style from '../../styles/Home.module.css'
 import Head from 'next/head'
 
 const UnsupportBrowser = () => {

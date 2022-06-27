@@ -1,8 +1,8 @@
-import Style from '../../../styles/Home.module.css'
+import Style from '../../styles/Home.module.css'
 import Head from 'next/head'
 
-import ProfileGrid from '../../components/templates/ProfileGrid';
-import TrackCard from '../../components/templates/TrackCard';
+import ProfileGrid from '../templates/ProfileGrid';
+import TrackCard from '../templates/TrackCard';
 
 type Props = {
   bgImage: any,
@@ -11,8 +11,8 @@ type Props = {
   trackLoadingError: boolean
 }
 
-const TopPage: React.VFC<Props> = (props) => {
-  const{bgImage, tracks, trackLoading, trackLoadingError} = props;
+const TopPage = (props: Props) => {
+  const{ bgImage, tracks, trackLoading, trackLoadingError } = props;
   const bgStyle = {
     backgroundImage: 'url('+bgImage+')',
     backgroundRepeat: 'no-repeat',

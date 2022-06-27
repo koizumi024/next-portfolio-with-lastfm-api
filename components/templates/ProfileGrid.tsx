@@ -1,6 +1,6 @@
-import Style from '../../../styles/Home.module.css'
+import Style from '../../styles/Home.module.css'
 
-import ProfileCard from '../organisms/ProfileCard'
+import ProfileCard from '../ProfileCard'
 
 const ProfileGrid = () => {
   const me = {
