@@ -1,0 +1,102 @@
+.circleImage {
+  border-radius: 50%;
+  -webkit-animation: fadeIn 0.8s forwards;
+          animation: fadeIn 0.8s forwards;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.circleImage::-moz-selection {
+  background: #65C3C8;
+}
+.circleImage::selection {
+  background: #65C3C8;
+}
+
+.icon {
+  color: #fff;
+  font-size: 24px;
+}
+.icon:hover {
+  opacity: 0.6;
+}
+
+.text_md_bold {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.text_md_bold::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+.text_md_bold::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+.text_md_bold a {
+  color: #fff;
+}
+.text_md_bold a::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+.text_md_bold a::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.text_sm_light {
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+}
+.text_sm_light::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+.text_sm_light::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+.text_sm_light a {
+  color: #fff;
+}
+.text_sm_light a::-moz-selection {
+  background: #65C3C8;
+  color: #fff;
+}
+.text_sm_light a::selection {
+  background: #65C3C8;
+  color: #fff;
+}
+
+.fadeInAnimation {
+  -webkit-animation: fadeIn 1.5s forwards;
+          animation: fadeIn 1.5s forwards;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=utilities.module.css.map */

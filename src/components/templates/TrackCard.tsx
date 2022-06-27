@@ -1,5 +1,6 @@
-import Style from '../../../styles/Home.module.css'
-import Track from '../molecules/Track'
+import Style from '../../styles/Home.module.css'
+import Utilities from '../../styles/utilities.module.css'
+import Track from '../Track'
 
 type Props = {
   tracks: any[],
@@ -7,7 +8,7 @@ type Props = {
   trackLoadingError: boolean
 }
 
-const TrackCard: React.VFC<Props> = (props) => {
+const TrackCard = (props: Props) => {
   const { tracks, trackLoading, trackLoadingError } = props
 
   return(
@@ -30,7 +31,7 @@ const TrackCard: React.VFC<Props> = (props) => {
         {trackLoading && <p className={Style.trackStatus}>Loading...</p>}
         {trackLoadingError && <p className={Style.trackStatus}>Not found tracks</p>}
 
-        <p className={Style.apiDescription}>The tracks are fetching from <a href="https://www.last.fm/ja/api">Last.fm API</a></p>
+        <p className={`${Utilities.text_sm_light} ${Utilities.fadeInAnimation}`}>The tracks are fetching from <a href="https://www.last.fm/ja/api">Last.fm API</a></p>
       </div>
     </>
   )

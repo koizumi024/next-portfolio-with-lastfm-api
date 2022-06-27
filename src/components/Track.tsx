@@ -1,4 +1,4 @@
-import Style from '../../../styles/Home.module.css'
+import Style from '../styles/Home.module.css'
 import Image from 'next/image'
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   artist: string;
 }
 
-const Track: React.VFC<Props> = (props) => {
+const Track = (props: Props) => {
   const { src, name, artist } = props
   return(
     <>

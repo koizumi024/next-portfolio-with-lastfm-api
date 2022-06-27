@@ -58,14 +58,6 @@ $black: #101010;
   }
 }
 
-.avatar{
-  border-radius: 50%;
-  animation: fadeIn 0.8s forwards;
-  animation-direction: alternate;
-  &::selection {
-    background: $accent;
-  }
-}
 .nameWrap{
   padding: 10px;
   display: flex;
@@ -73,42 +65,12 @@ $black: #101010;
   justify-content: center;
   animation: fadeIn 0.8s forwards;
   animation-direction: alternate;
-
-  .username{
-    text-align: center;
-    color: $primary;
-    font-size: 22px;
-    font-weight: 700;
-
-    &::selection {
-      background: $accent;
-      color: $primary;
-    }
-  }
-  .bio{
-    text-align: center;
-    color: $second;
-    font-size: 14px;
-
-    &::selection {
-      background: $accent;
-      color: $primary;
-    }
-  }
 }
 
 .iconWrap{
   padding: 3px;
   animation: fadeIn 0.8s forwards;
   animation-direction: alternate;
-}
-.icon{
-  color: $primary;
-  font-size: 24px;
-
-  &:hover{
-    opacity: 0.6;
-  }
 }
 
 .track{
@@ -177,40 +139,6 @@ $black: #101010;
   animation: fadeIn 0.2s forwards;
   animation-direction: alternate;
 }
-.apiDescription{
-  color: $second;
-  font-size: 11px;
-  margin: 20px 0px 0px 0px;
-  animation: fadeIn 1.5s forwards;
-  animation-timing-function: ease-out;
-  animation-delay: 1.5s;
-  animation-direction: alternate;
-  opacity: 0;
-
-  &::selection {
-    background: $accent;
-    color: $primary;
-  }
-
-  a{
-    color: $primary;
-    &::selection {
-      background: $accent;
-      color: $primary;
-    }
-  }
-}
-
-@keyframes blurFadeIn {
-  0%{
-    opacity: 0;
-    filter: blur(10px);
-  }
-  100% {
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
 
 @keyframes fadeIn {
   0%{
@@ -218,11 +146,5 @@ $black: #101010;
   }
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes animation02 {
-  100% {
-  transform: translateX(0%);
   }
 }

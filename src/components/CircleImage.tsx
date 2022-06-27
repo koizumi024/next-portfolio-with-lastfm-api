@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Style from '../../../styles/Home.module.css'
+import Utilities from '../styles/utilities.module.css'
 
 type Props = {
   src: string;
@@ -8,11 +8,11 @@ type Props = {
   alt?: string;
 }
 
-const CircleImage: React.VFC<Props> = (props) =>{
+const CircleImage = (props: Props) =>{
   const {src, width, height, alt} = props
   return(
     <Image
-      className={Style.avatar}
+      className={Utilities.circleImage}
       src={src}
       width={width}
       height={height}

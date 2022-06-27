@@ -1,6 +1,7 @@
-import Style from '../../../styles/Home.module.css'
+import Style from '../styles/Home.module.css'
+import Utilities from '../styles/utilities.module.css'
 
-import CircleImage from '../atoms/CircleImage'
+import CircleImage from './CircleImage'
 
 import { FaGithub } from "react-icons/fa"
 
@@ -12,7 +13,7 @@ type Props = {
   discord?: string;
 }
 
-const ProfileCard: React.VFC<Props> = (props) => {
+const ProfileCard = (props: Props) => {
   const {avatar, name, bio, github, discord} = props
   return(
     <>
@@ -23,12 +24,12 @@ const ProfileCard: React.VFC<Props> = (props) => {
         alt="avatar" 
       />
       <div className={Style.nameWrap}>
-        <span className={Style.username}>{name}</span>
-        <span className={Style.bio}>{bio}</span>
+        <span className={Utilities.text_md_bold}>{name}</span>
+        <span className={Utilities.text_sm_light}>{bio}</span>
       </div>
       <a href={`https://github.com/${github}`}>
         <div className={Style.iconWrap}>
-          <FaGithub className={Style.icon} />
+          <FaGithub className={Utilities.icon} />
         </div>
       </a>
     </>
