@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Utilities from '../styles/utilities.module.css'
 
+
 type Props = {
   src: string;
   width?: string;
