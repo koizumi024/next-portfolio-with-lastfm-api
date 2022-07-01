@@ -77,13 +77,13 @@ $black: #101010;
   display: flex;
   padding: 10px 0px;
   max-width: 100%;
+  max-height: 75px;
 
   .thumb{
     border-radius: 10%;
     animation: fadeIn 0.5s forwards;
     animation-timing-function: ease-out;
     animation-direction: alternate;
-    animation-delay: 0.7s;
     opacity: 0;
 
     &::selection {
@@ -102,7 +102,6 @@ $black: #101010;
     animation: fadeIn 0.5s forwards;
     animation-timing-function: ease-out;
     animation-direction: alternate;
-    animation-delay: 0.7s;
     opacity: 0;
 
     .name{

@@ -1,6 +1,7 @@
 import Style from '../../styles/Home.module.css'
 import Utilities from '../../styles/utilities.module.css'
 import Track from '../Track'
+import LoadingTrack from '../LoadingTrack'
 
 type Props = {
   tracks: any[],
@@ -26,12 +27,13 @@ const TrackCard = (props: Props) => {
               />
             )
           })}
+          {trackLoading && <><LoadingTrack /><LoadingTrack /><LoadingTrack /><LoadingTrack /></>}
         </div>
 
-        {trackLoading && <p className={Style.trackStatus}>Loading...</p>}
+        
         {trackLoadingError && <p className={Style.trackStatus}>Not found tracks</p>}
 
-        <p className={`${Utilities.text_sm_light} ${Utilities.fadeInAnimation}`}>The tracks are fetching from <a href="https://www.last.fm/ja/api">Last.fm API</a></p>
+        <p className={Utilities.text_sm_light}>The tracks are fetching from <a href="https://www.last.fm/ja/api">Last.fm API</a></p>
       </div>
     </>
   )
